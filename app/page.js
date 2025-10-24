@@ -1,22 +1,22 @@
+import {FiGithub, FiLinkedin} from "react-icons/fi";
+
 export default function Home() {
   return (
-    <div className="max-w-2xl p-8 mx-auto font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 justify-center">
+    <div className="max-w-4xl p-8 mx-auto font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-8 justify-center py-20">
         <header>
-          <div className="text-3xl text-center">Armin Shahnami</div>
+          <div className="text-5xl text-center">Armin Shahnami</div>
         </header>
 
-        <section id="about">
-          <div className="text-xl">About</div>
-
-          <div>Hi, I'm a final year Computer Science student studying at Queen Mary University of London.</div>
+        <section id="about" className="m-auto">
+          <div>Computer Science graduate</div>
         </section>
 
         <section id="projects" className="flex flex-col gap-1">
             <div className="text-xl">Projects</div>
 
             <div className="flex flex-col gap-4">
-              <div className="flex flex-col justify-between bg-project-background h-24 p-2 rounded">
+              <div className="flex flex-col justify-between bg-[--color-project] h-24 p-2 rounded">
                 <div className="text-lg">
                   Paper Trader
                 </div>
@@ -30,7 +30,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col justify-between bg-project-background h-24 p-2 rounded">
+              <div className="flex flex-col justify-between bg-[--color-project] h-24 p-2 rounded">
                 <div className="text-lg">
                   Typing Game
                 </div>
@@ -53,26 +53,22 @@ export default function Home() {
                 </li>
             </ul>
 
-            <p>Other repositories can be found at <a href="https://github.com/ashahnami" className="font-medium text-blue-400 hover:underline">github.com/ashahnami</a>.</p>
+            <p>Other repositories can be found at my GitHub page via the link below.</p>
         </section>
 
-        <section id="contact">
-            <div className="text-xl">Contact</div>
+        <section id="contact" className="flex flex-row gap-5 m-auto">
+            <a href="https://github.com/ashahnami">
+                <FiGithub className="text-2xl hover:text-blue-400 transition-colors duration-150"/>
+            </a>
 
-            <ul>
-                <li>
-                    <a href="https://github.com/ashahnami" className="font-medium text-blue-400 hover:underline">github.com/ashahnami</a>
-                </li>
-
-                <li>
-                    <a href="https://www.linkedin.com/in/arminshahnami" className="font-medium text-blue-400 hover:underline">linkedin.com/in/arminshahnami</a>
-                </li>
-            </ul>
+            <a href="https://www.linkedin.com/in/arminshahnami">
+                <FiLinkedin className="text-2xl hover:text-blue-400 transition-colors duration-150" />
+            </a>
         </section>
       </main>
 
-      <footer className="fixed bottom-0 left-0 m-2 w-screen text-center">
-        Armin Shahnami © 2024
+      <footer className="fixed bottom-0 left-0 m-2 w-screen text-center text-[--color-copyright]">
+        Armin Shahnami © 2025
       </footer>
     </div>
   );
